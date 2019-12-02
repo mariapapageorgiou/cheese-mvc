@@ -27,7 +27,6 @@ public class CheeseData {
 
     // getById
     public static Cheese getById(int id) {
-
         Cheese theCheese = null;
 
         for (Cheese candidateCheese : cheeses) {
@@ -35,8 +34,6 @@ public class CheeseData {
                 theCheese = candidateCheese;
             }
         }
-
         return theCheese;
     }
-
 }

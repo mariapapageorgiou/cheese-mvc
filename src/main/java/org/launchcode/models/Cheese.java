@@ -8,27 +8,27 @@ import javax.validation.constraints.Size;
  */
 public class Cheese {
 
-    @NotNull
-    @Size(min=3, max=15)
+    @NotNull                    //this field should be not null while validating
+    @Size(min=3, max=15)        //should be a specific size
     private String name;
 
     @NotNull
     @Size(min=1, message = "Description must not be empty")
     private String description;
 
-    private CheeseType type;
+    private CheeseType type;    //
 
     private int cheeseId;
     private static int nextId = 1;
 
     public Cheese(String name, String description) {
-        this();
+        this();                           // call the default constructor public Cheese() on line30
         this.name = name;
         this.description = description;
     }
 
     public Cheese() {
-        cheeseId = nextId;
+        cheeseId = nextId;  // we need to initialize the cheeseId and when this nextId is in use we need to increment by one
         nextId++;
     }
 
